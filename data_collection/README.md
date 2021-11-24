@@ -10,4 +10,5 @@
 ## How to Run
 
 1. Activate environment: `source env/bin/activate`
-1. Run script: `python3 search_tweet_<suffix>.py` where `<suffix>` is the version or endpoint used to fetch Twitter data
+1. To collect data: `python3 search_tweet_<suffix>.py` where `<suffix>` is the version or endpoint used to fetch Twitter data
+1. To process data: `python3 processing.py input_json_path [number_to_keep]`
