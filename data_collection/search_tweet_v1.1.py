@@ -20,8 +20,8 @@ api = tweepy.API(auth) # API for V1.1
 # places = api.search_geo(query="Canada", granularity="country") 
 # print(places)
 
-query = 'place:3376992a082d67c7 -filter:retweets (covid OR vaccination OR pfizer OR moderna OR johnson&johnson OR astrazeneca)'
-limit = 2000
+query = '-filter:retweets (covid OR vaccination OR pfizer OR moderna OR johnson&johnson OR astrazeneca)'
+limit = 1000
 tweets = tweepy.Cursor(api.search_tweets, q=query, lang='en', result_type='recent', tweet_mode='extended').items(limit)
 
 l = []
