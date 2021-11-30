@@ -55,6 +55,7 @@ with open(IFILE) as ifile:
             print(f"Failed to retrieve original for row {index} (tweet id {post['id']}). Only keeping reply text. Error message:\n{str(e)}")
 
         res.append({
+            'row' : index + 1,
             'id' : post['id'],
             'created_at' : post['created_at'],
             'full_text' : full_text,
